@@ -4,4 +4,4 @@ openai
 elasticsearch
 pandas
 scikit-learn
-docx
+python-docx
