@@ -1,8 +1,8 @@
 import streamlit as st
-import time
 
 from openai import OpenAI
 from elasticsearch import Elasticsearch
+
 
 client = OpenAI(
     base_url='http://localhost:11434/v1/',

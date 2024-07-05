@@ -5,3 +5,9 @@ elasticsearch
 pandas
 scikit-learn
 python-docx
+transformers
+torch
+requests
+pandas
+scikit-learn
+streamlit
