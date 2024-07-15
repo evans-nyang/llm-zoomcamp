@@ -11,3 +11,4 @@ requests
 pandas
 scikit-learn
 streamlit
+sentence_transformers==2.7.0
