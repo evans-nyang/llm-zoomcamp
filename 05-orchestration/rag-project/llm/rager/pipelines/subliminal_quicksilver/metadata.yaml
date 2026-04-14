@@ -1,0 +1,168 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1727110501
+      name: spectral_nebula.py
+      output: null
+      path: /home/src/llm/rager/data_loaders/spectral_nebula.py
+      relative_path: llm/rager/data_loaders/spectral_nebula.py
+      size: 1550
+    file_source:
+      path: rager/data_loaders/spectral_nebula.py
+    templates:
+      api:
+        variables:
+          auth_token: null
+          endpoint: https://raw.githubusercontent.com/DataTalksClub/llm-zoomcamp/refs/heads/main/01-intro/documents.json
+          method: GET
+          parser: null
+          timeout: 30
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - ingest
+  has_callback: false
+  language: python
+  name: Spectral nebula
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: spectral_nebula
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/prismatic_eon.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - chunking
+  has_callback: false
+  language: python
+  name: Prismatic eon
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: prismatic_eon
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/fabled_maelstrom.py
+    templates:
+      lemmatization_spacy:
+        variables:
+          handle_stopwords: false
+          language: en
+          use_pos_tags: true
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - tokenization
+  has_callback: false
+  language: python
+  name: Fabled maelstrom
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: fabled_maelstrom
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/hallowed_eidolon.py
+    templates:
+      spacy_embeddings:
+        variables:
+          model_name: en_core_web_sm
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - embed
+  has_callback: false
+  language: python
+  name: Hallowed eidolon
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: hallowed_eidolon
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1727116032
+      name: enigmatic_aura.py
+      output: null
+      path: /home/src/llm/rager/data_exporters/enigmatic_aura.py
+      relative_path: llm/rager/data_exporters/enigmatic_aura.py
+      size: 2054
+    file_source:
+      path: rager/data_exporters/enigmatic_aura.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://host.docker.internal:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Enigmatic aura
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks: []
+  uuid: enigmatic_aura
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-09-23 16:54:41.233316+00:00'
+data_integration: null
+description: null
+execution_framework: rag
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Subliminal quicksilver
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: subliminal_quicksilver
+variables_dir: /home/src/mage_data/rager
+widgets: []
